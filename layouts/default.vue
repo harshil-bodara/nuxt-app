@@ -14,3 +14,13 @@ export default {
     }
 }
 </script>
+
+<style>
+html{
+    font-family: 'sans-serif', 'Open Sans';
+}
+body{
+    margin: 0;
+}
+
+</style>
