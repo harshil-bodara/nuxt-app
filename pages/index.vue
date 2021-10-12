@@ -4,39 +4,32 @@
         <h1>Get the latest tech news!</h1>
       </section>
       <section class="featured-posts">
-        <nuxt-link :to="'/posts' +1">
-          <article class="post-preview">
-            <div class="post-preview"></div>
-            <div class="post-thumbnail" style="background-image:url('https://images.unsplash.com/photo-1634005083664-f06a3bbc9416?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')"></div>
-            <div class="post-content">
-              <h2>Post title</h2>
-               <p>Post content</p>
-            </div>
-          </article>
-        </nuxt-link>
-         <nuxt-link :to="'/posts' +1">
-          <article class="post-preview">
-            <div class="post-preview"></div>
-            <div class="post-thumbnail" style="background-image:url('https://images.unsplash.com/photo-1634005083664-f06a3bbc9416?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')"></div>
-            <div class="post-content">
-              <h2>Post title</h2>
-               <p>Post content</p>
-            </div>
-          </article>
-        </nuxt-link>
-         <nuxt-link :to="'/posts' +1">
-          <article class="post-preview">
-            <div class="post-preview"></div>
-            <div class="post-thumbnail" style="background-image:url('https://images.unsplash.com/photo-1634005083664-f06a3bbc9416?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')"></div>
-            <div class="post-content">
-              <h2>Post title</h2>
-               <p>Post content</p>
-            </div>
-          </article>
-        </nuxt-link>
+       <PostPreview 
+          id="1"
+          thumbnail="https://images.unsplash.com/photo-1634005083664-f06a3bbc9416?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          title="post 1"
+          content="Hello world"
+          />
+       <PostPreview
+          id="2"
+          thumbnail="https://images.unsplash.com/photo-1634005083664-f06a3bbc9416?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          title="post 2"
+          content="Hello world"
+       />
       </section>
   </div>
 </template>
+
+<script>
+import PostPreview from '~/components/posts/postspreview.vue'
+
+export default {
+  components:{
+    PostPreview
+  }
+}
+</script>
+
 
 <style scoped>
 .featured-posts{
