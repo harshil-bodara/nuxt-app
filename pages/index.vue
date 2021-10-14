@@ -34,6 +34,7 @@ export default {
 <style scoped>
 .featured-posts{
   display: flex;
+  background-image: url('~assets/images/tag.jpeg');
 }
 .post-preview{
  border: 1px solid #ccc;
