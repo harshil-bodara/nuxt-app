@@ -1,5 +1,35 @@
 <template>
-    <div>
-        Admin Page
+    <div class="admin-page">
+        <section class="new-post">
+            <button @click="$router.push('admin/new-post')">Create Post</button>
+        </section>
+        <section class="existing-post">
+            <h1>Exitsting Post</h1>
+            <PostList isAdmin/>
+        </section>
     </div>
 </template>
+
+<script>
+import PostList from '~/components/posts/postlist.vue'
+
+export default {
+    components:{
+        PostList
+    }
+}
+</script>
+
+<style scoped>
+.admin-page{
+    padding:20px
+}
+.new-post{
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+.existing-post{
+    text-align: center;
+}
+</style>
